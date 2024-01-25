@@ -6,6 +6,8 @@
 @import "favorite";
 @import "model";
 @import "sponsor";
+@import "footer";
+@import "responsive";
 * {
   margin: 0;
   padding: 0;
@@ -41,6 +43,9 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--body-color);
   color: var(--text-color);
   font-size: var(--normal-font-size);

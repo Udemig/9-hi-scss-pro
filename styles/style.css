@@ -4,6 +4,8 @@
   background-color: transparent;
   position: fixed;
   padding: 5px 20px;
+  top: 0;
+  left: 0;
   z-index: var(--z-fixed);
 }
 .header .nav {
@@ -47,6 +49,20 @@
   z-index: -1;
 }
 
+.togle-menu {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .toogle-menu {
+    display: flex;
+    font-size: 20px;
+    color: white;
+  }
+  header .nav__list {
+    visibility: hidden;
+  }
+}
 .home__container {
   display: flex;
   padding: 7rem 1rem;
@@ -249,6 +265,200 @@
   align-items: center;
 }
 
+.footer {
+  padding-block: 32px;
+  display: grid;
+  margin-left: 40px;
+}
+.footer__container {
+  row-gap: 64px;
+}
+.footer__logo {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+}
+.footer__data {
+  grid-template-columns: repeat(2, 1fr);
+}
+.footer__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: 32px;
+}
+.footer__links {
+  display: grid;
+  row-gap: 10px;
+}
+.footer__link {
+  color: var(--text-color);
+  transition: color 0.4s;
+}
+.footer__link:hover {
+  color: var(--first-color);
+}
+.footer__group {
+  display: grid;
+}
+.footer__group input {
+  border: none;
+  outline: none;
+  padding: 20px 30px;
+  width: 70%;
+  margin-bottom: 20px;
+  border-radius: 64px;
+  background-color: var(--container-color);
+  color: var(--text-color);
+}
+.footer__group button {
+  width: 70%;
+}
+.footer__button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.footer__social div {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+.footer__social div a {
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+.footer__social div a:hover {
+  color: var(--first-color);
+}
+
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+  .home__img {
+    width: 180px;
+  }
+  .home__title {
+    font-size: 8rem;
+  }
+  .model__tooltip-1 .model__tooltip-text,
+  .model__tooltip-2 .model__tooltip-text {
+    transform: translate(40px, -40px);
+  }
+  .sponsor {
+    margin-left: 30px;
+  }
+  .footer__form button {
+    width: 130px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .about__container {
+    grid-template-columns: 380px;
+    justify-content: center;
+  }
+  .footer__data {
+    grid-template-columns: repeat(3, max-content);
+    -moz-column-gap: 48px;
+         column-gap: 48px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .home__img {
+    width: 320px;
+  }
+  .home__title {
+    font-size: 256px;
+    top: -64px;
+  }
+  .home__social {
+    top: 0;
+    bottom: 0;
+    align-content: center;
+  }
+  .sponsor__container {
+    grid-template-columns: repeat(4, max-content);
+  }
+  .footer__container {
+    justify-content: space-between;
+  }
+  .footer__data {
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .container {
+    margin-inline: auto;
+  }
+  .section {
+    padding-block: 128px 32px;
+  }
+  .section__title {
+    font-size: var(--h1-font-size);
+  }
+  .home__img {
+    width: 500px;
+  }
+  .home__title {
+    font-size: 25rem;
+    top: -8px;
+    -moz-column-gap: 16px;
+         column-gap: 16px;
+  }
+  .home__tooltip-img {
+    width: initial;
+  }
+  .home__tooltip-text {
+    font-size: var(--normal-font-size);
+    transform: translate(82px, -52px);
+  }
+  .home__social-text {
+    font-size: var(--normal-font-size);
+  }
+  .home__social-links {
+    row-gap: 16px;
+  }
+  .home__social-link {
+    font-size: 24px;
+  }
+  .about__container {
+    grid-template-columns: 400px 500px;
+  }
+  .about__data .section__title,
+  .about__data {
+    text-align: initial;
+  }
+  .about__img {
+    width: 500px;
+  }
+  .model__img {
+    width: 600px;
+  }
+  .model__tooltip-img {
+    width: initial;
+  }
+  .model__tooltip-text {
+    font-size: var(--normal-font-size);
+    padding: 8px 20px;
+    transform: translate(82px, -56px);
+  }
+  .model__tooltip-1 {
+    top: 160px;
+    left: 13rem;
+  }
+  .model__tooltip-3 {
+    bottom: 6rem;
+    right: 120px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -284,6 +494,9 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--body-color);
   color: var(--text-color);
   font-size: var(--normal-font-size);

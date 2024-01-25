@@ -3,8 +3,8 @@
   background-color: transparent;
   position: fixed;
   padding: 5px 20px;
-  // top: 0;
-  // left: 0;
+  top: 0;
+  left: 0;
   z-index: var(--z-fixed);
   .nav {
     display: flex;
@@ -46,4 +46,19 @@
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+.togle-menu {
+  display: none;
+}
+@media screen and (max-width: 850px) {
+  .toogle-menu {
+    display: flex;
+    font-size: 20px;
+    color: white;
+  }
+  header .nav__list {
+    // display: none;
+    visibility: hidden;
+  }
 }
